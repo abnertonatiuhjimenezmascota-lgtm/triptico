@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title> Triptico interactivo </title>
+    <style>
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    height: 200vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("Imagenes/Fondo.jpg")
+}
+.boton_imagen {
+    background: none;
+    border: none;
+    cursor: none;
+}
+.boton_imagen img {
+    width: 250px;
+    height: 100px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px;
+    transition: transform 0.2s;
+}
+.boton_imagen img:hover {
+    transform: scale(1.1);
+}
+.fondo_modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+h1 {
+    color: black;
+    text-align: center;
+}
+p {
+   color: black;
+   font-size: 32px;
+   font-family: 'Times New Roman', Times, serif; 
+}
+.p1 {
+    color: black;
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.margen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 625px;
+    height: 925px;
+    background-color: green;
+}
+.rectangulo {
+    text-align: center;
+    width: 600px;
+    height: 900px;
+    background-color: orange;
+}
+.boton {
+    text-align: center;
+    color:white;
+    border: none;
+    cursor: pointer;
+    background-color: blue;
+    width: 70px;
+    height: 30px;
+    border-radius: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    transition: background-color 0.2s;
+}
+.boton:hover {
+    background-color:blue;
+}
+img {
+    width: 100%;
+}
+.ventana{
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 0 15px;
+    text-align: center;
+}
+textarea {
+    width: 90px;
+    height: 80px;
+    margin-top: 10px;
+    resize: none;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    padding: 5px;
+}
+.cerrar {
+    margin-top: 10px;
+    padding: 8px 15px;
+    background: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.cerrar:hover {
+    background: #0056b3;
+}
+</style>
+</head>
+<body>
+    <div class="margen"> 
+<div class="rectangulo">
+    <h2> 3.1.1 Etapas del desarrollo legislativo ambiental</h2>
+<p1> <h4> 1. Etapa Preambiental (antes de 1970) </h4>
+
+Estilo: Normativo y disperso.
+Características:
+
+No existía una legislación ambiental como tal.
+
+Las leyes estaban enfocadas en salud pública, recursos naturales y control sanitario.
+
+Se protegía el ambiente de forma indirecta (regulando aguas o bosques).
+
+<h4> 2. Etapa de Conciencia Ambiental (1970–1982) </h4>
+
+Estilo: Reactivo y sectorial.
+Características:
+
+Comienza la preocupación por la contaminación industrial.
+
+Surgen leyes sectoriales: aire, agua, residuos.
+
+En 1971 se crea la Ley Federal para Prevenir y Controlar la Contaminación Ambiental, primer antecedente formal ambiental.
+
+Se integran dependencias dentro de la Secretaría de Salubridad y Asistencia.
+
+<h4> 3. Etapa de Institucionalización (1982–1994)</h4>
+
+Estilo: Integral y organizativo.
+Características:
+
+Se reconoce el medio ambiente como tema nacional.
+
+En 1982 se expide la Ley Federal de Protección al Ambiente (LFPA).
+
+En 1988 se publica la Ley General del Equilibrio Ecológico y la Protección al Ambiente (LGEEPA), base del derecho ambiental actual.
+
+Se crean instituciones ambientales, como la SEDUE (Secretaría de Desarrollo Urbano y Ecología).
+
+<h4> 4. Etapa de Sustentabilidad y Globalización (1994–2000) </h4>
+
+Estilo: Preventivo y participativo.
+Características:
+
+En 1994 se crea la Secretaría de Medio Ambiente, Recursos Naturales y Pesca (SEMARNAP).
+
+Se fortalecen los instrumentos de gestión ambiental, como:
+
+Evaluación de impacto ambiental (EIA)
+
+Ordenamiento ecológico
+
+Auditorías ambientales
+
+
+<h4> 5. Etapa de Modernización y Gobernanza Ambiental (2000–actualidad) </h4>
+
+Estilo: Integrador, transversal y de corresponsabilidad social.
+Características:
+
+Se consolida la SEMARNAT (Secretaría de Medio Ambiente y Recursos Naturales).
+
+Se promueven leyes específicas:
+
+Ley General de Vida Silvestre (2000)
+
+Ley General para la Prevención y Gestión Integral de los Residuos (2003)
+
+Ley General de Desarrollo Forestal Sustentable (2018)
+
+Se integran principios de sustentabilidad, participación ciudadana y responsabilidad compartida.
+
+Enfoque en cambio climático, economía circular, energías limpias y derecho a un medio ambiente sano artículo 4°. <br>
+
+ <button class="boton_imagen" onclick="abrirVentana()">  <img src="Imagenes/Evolucionj.png" alt="Abrir ventana"> </button> <br>
+        <div class="fondo_modal" id="modal"> 
+            <div class="ventana">
+                <h5> A lo largo de las etapas se fueron implementando nuevas acciones para el cuiadado del medio ambiente pues este ambito Fuetomando mas 
+                    relevancia con el pasar de los años.
+                </h5>
+                <button class="cerrar" onclick="cerrarVentana()"> Cerrar </button> <br> </div> </div>
+
+  </p1> </div> </div>
+
+    <div class="boton" onclick="window.location.href='Pagina 4.html'"> Volver
+ </div>
+    <div class="boton" onclick="window.location.href='index.html'"> Cerrar
+ </div>
+
+ <script>
+    function abrirVentana() {
+        document.getElementById("modal").style.display = "flex";
+    }
+    function cerrarVentana() {
+        document.getElementById("modal").style.display = "none";
+    }
+ </script>
+</body>
+</html>
