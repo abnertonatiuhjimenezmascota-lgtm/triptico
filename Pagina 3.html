@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title> Triptico interactivo </title>
+    <style>
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    height: 200vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("Imagenes/Fondo.jpg")
+}
+.boton_imagen {
+    background: none;
+    border: none;
+    cursor: none;
+}
+.boton_imagen img {
+    width: 205px;
+    height: 150x;
+    border-radius: 20px;
+    box-shadow: 0 0 10px;
+    transition: transform 0.2s;
+}
+.boton_imagen img:hover {
+    transform: scale(1.1);
+}
+.fondo_modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+h1 {
+    color: black;
+    text-align: center;
+}
+p {
+   color: black;
+   font-size: 32px;
+   font-family: 'Times New Roman', Times, serif; 
+}
+.p1 {
+    color: black;
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.margen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 625px;
+    height: 925px;
+    background-color: green;
+}
+.rectangulo {
+    text-align: center;
+    width: 600px;
+    height: 900px;
+    background-color: orange;
+}
+.boton {
+    text-align: center;
+    color:white;
+    border: none;
+    cursor: pointer;
+    background-color: blue;
+    width: 70px;
+    height: 30px;
+    border-radius: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    transition: background-color 0.2s;
+}
+.boton:hover {
+    background-color:blue;
+}
+img {
+    width: 50%;
+}
+.ventana{
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 0 15px;
+    text-align: center;
+}
+textarea {
+    width: 90px;
+    height: 80px;
+    margin-top: 10px;
+    resize: none;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    padding: 5px;
+}
+.cerrar {
+    margin-top: 10px;
+    padding: 8px 15px;
+    background: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.cerrar:hover {
+    background: #0056b3;
+}
+</style>
+</head>
+<body>
+    <div class="margen"> 
+<div class="rectangulo">
+    <h2> 3.1 La planificacion para el desarrollo </h2>
+    <p1> <h4> Objetivos de la planificación para el desarrollo. </h4>
+
+Coordinar recursos y acciones: Evitar duplicidad y desperdicio de recursos. <br>
+
+Fijar metas claras: Tener objetivos medibles y alcanzables en distintos plazos (corto, mediano y largo). <br>
+
+Promover el desarrollo sostenible: Garantizar que las necesidades actuales se satisfagan sin comprometer las de futuras generaciones. <br>
+
+Reducir desigualdades: Mejorar la calidad de vida de la población, especialmente de los grupos más vulnerables. <br>
+
+Anticipar problemas: Prever conflictos, crisis económicas o desastres naturales y planificar soluciones.
+
+<h4> Principios básicos </h4>
+
+1. Integralidad: Considerar todos los aspectos de la sociedad y el medio ambiente. <br> 
+
+2. Participación: Involucrar a la población en la toma de decisiones. <br> 
+
+3. Sustentabilidad: Garantizar que los recursos se usen de manera responsable. <br> 
+
+4. Flexibilidad: Poder adaptar la planificación ante cambios sociales, tecnológicos o ambientales. <br>
+
+5. Equidad: Distribuir beneficios de manera justa entre la población. <br> 
+
+<h4> Etapas de la planificación para el desarrollo </h4>
+
+1. Diagnóstico: Analizar la situación actual (economía, educación, salud, medio ambiente, infraestructura). <br>
+
+2. Formulación de objetivos y estrategias: Definir metas y cómo alcanzarlas. <br>
+
+3. Programación y priorización: Decidir qué proyectos se realizarán primero según su impacto y recursos. <br>
+
+4. Implementación: Ejecutar los proyectos y programas planificados. <br>
+
+5. Monitoreo y evaluación: Medir resultados, ajustar estrategias y mejorar procesos. <br>
+
+<button class="boton_imagen" onclick="abrirVentana()">  <img src="Imagenes/Pagina3_Agenda2030.png" alt="Abrir ventana"> </button> <br>
+        <div class="fondo_modal" id="modal"> 
+            <div class="ventana">
+                <h5> La agenda 2030 buscan armonizar el crecimiento económico, la inclusión social y la protección del medio ambiente para 
+                    lograr un futuro próspero para todos</h5>
+                <button class="cerrar" onclick="cerrarVentana()"> Cerrar </button> <br> </div> </div>
+
+<h4> Tipos de planificación </h4>
+
+Planificación económica: Focalizada en crecimiento económico y empleo. <br> 
+
+Planificación social: Centrada en educación, salud, vivienda y bienestar. <br>
+
+Planificación ambiental: Protección de recursos naturales y reducción de impactos ambientales. <br>
+
+Planificación urbana/regional: Organización del uso del suelo, infraestructura y servicios públicos. <br>
+
+
+
+</p1> </div> </div>
+
+
+
+    <div class="boton" onclick="window.location.href='Pagina 2.html'"> Volver
+ </div>
+    <div class="boton" onclick="window.location.href='Pagina 4.html'"> Siguiente
+ </div>
+
+ <script>
+    function abrirVentana() {
+        document.getElementById("modal").style.display = "flex";
+    }
+    function cerrarVentana() {
+        document.getElementById("modal").style.display = "none";
+    }
+ </script>
+</body>
+</html>

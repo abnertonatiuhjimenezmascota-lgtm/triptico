@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title> Triptico interactivo </title>
+    <style>
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    height: 200vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("Imagenes/Fondo.jpg")
+}
+.boton_imagen {
+    background: none;
+    border: none;
+    cursor: none;
+}
+.boton_imagen img {
+    width: 125px;
+    height: 75px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px;
+    transition: transform 0.2s;
+}
+
+.boton_imagen img:hover {
+    transform: scale(1.1);
+}
+.fondo_modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+h1 {
+    color: black;
+    text-align: center;
+}
+p {
+   color: black;
+   font-size: 32px;
+   font-family: 'Times New Roman', Times, serif; 
+}
+.p1 {
+    color: black;
+    font-size: 12px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.margen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 625px;
+    height: 925px;
+    background-color: green;
+}
+.rectangulo {
+    text-align: center;
+    width: 600px;
+    height: 900px;
+    background-color: orange;
+}
+.boton {
+    text-align: center;
+    color:white;
+    border: none;
+    cursor: pointer;
+    background-color: blue;
+    width: 80px;
+    height: 30px;
+    border-radius: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    transition: background-color 0.2s;
+}
+.boton:hover {
+    background-color:blue;
+}
+img {
+    width: 50%;
+}
+.ventana{
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 0 15px;
+    text-align: center;
+}
+textarea {
+    width: 90px;
+    height: 80px;
+    margin-top: 10px;
+    resize: none;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    padding: 5px;
+}
+.cerrar {
+    margin-top: 10px;
+    padding: 8px 15px;
+    background: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.cerrar:hover {
+    background: #0056b3;
+}
+.p2{
+    color: black;
+    font-size: 12px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.n {
+    font-weight: bold;
+    color: black;
+}
+</style>
+</head>
+<body>
+    <div class="margen" >
+<div class="rectangulo">
+    <br> <h2> 3. Desarrollo sustentable y evolucion de la legislacion ambiental </h2>
+    <p1> La union del desarrollo sustentable con la legislacion se basa en tecnicas e implementaciones que mediante el gobierno y la ciudadania
+        de cada pais lleven a nuestro planeta a una modalidad sustentable donde como seres humanos seamos capaces de vivir en mejores circunstancias
+        sin llegar a perjudicar a otros seres vivios como lo son los animales y las plantas del planeta.  <br>
+         
+       <h4> Evolucion de la legislacion ambiental: <br> </h4>
+Algunos hitos clave de la legislacion ambiental son: <br>
+<br> Coferencia de Estocolmo (1972) <br> <button class="boton_imagen" onclick="abrirVentana(1)">  <img src="Imagenes/Estocolmo.jpg" alt="Abrir ventana"> </button> <br>
+        <div class="fondo_modal" id="ventana1"> 
+            <div class="ventana">
+                <h5> Fue la primera conferencia mundial sobre medio ambiente que estableció las bases de la cooperación internacional en materia ambiental, 
+                    adoptando la Declaración de Estocolmo (26 principios) y el Plan de Acción, y creando el Programa de las Naciones Unidas para el Medio Ambiente 
+                    (PNUMA) </h5>
+                <button class="cerrar" onclick="cerrarVentana(1)"> Cerrar </button>
+            </div>
+        </div><br>
+<br> Comision Brundtland (1983-1987) <br> <button class="boton_imagen" onclick="abrirVentana(2)">  <img src="Imagenes/Brundtland.jpg" alt="Abrir ventana"> </button> <br>
+        <div class="fondo_modal" id="ventana2"> 
+            <div class="ventana">
+                <h5> Publicado en 1987 por la Comisión Mundial sobre Medio Ambiente y Desarrollo de la ONU, 
+                    es un documento clave que acuñó el concepto de desarrollo sostenible: "satisfacer las 
+                    necesidades del presente sin comprometer la capacidad de las generaciones futuras para 
+                    satisfacer sus propias necesidades". </h5>
+                <button class="cerrar" onclick="cerrarVentana(2)"> Cerrar </button>
+            </div>
+        </div><br>
+<br> Cumbre de Johannesburgo (2002) <br> <button class="boton_imagen" onclick="abrirVentana(3)">  <img src="Imagenes/Johannesburgo.jpg" alt="Abrir ventana"> </button> <br>
+        <div class="fondo_modal" id="ventana3"> 
+            <div class="ventana">
+                <h5> Reunió a líderes mundiales, organizaciones y la sociedad civil para reevaluar y revitalizar el 
+                    compromiso con el desarrollo sostenible, 10 años después de la Cumbre de la Tierra de Río. Se 
+                    adoptaron una "Declaración Política" y un "Plan de Implementación" que abordaron la erradicación 
+                    de la pobreza, la protección de los recursos naturales, el consumo y la producción sostenibles, 
+                    y la necesidad de una globalización más equitativa e inclusiva. </h5>
+                <button class="cerrar" onclick="cerrarVentana(3)"> Cerrar </button>
+            </div>
+        </div>
+         
+<h4> Avances recientes </h4>
+Intrumentos economicos y de participacion ciudadana: Se han incorporado herramientas para incentivas
+practicas sustentables y para brindar informacion ambiental. <br>
+Vision holistica: El derecho ambiental aborda la conservacion de recurso, la proteccion de especies y 
+la regulacion de contaminantes, buscando la conexion entre bienestar humano y salud ecologica. <br>
+Marco legal: Se compone de tratados, leyes, reglamentos y normas que regulan la interaccion humana con el ambiente.
+    
+    </p1> </div> </div>
+
+   <div class="boton" onclick="window.location.href='index.html'"> Volver
+ </div>
+  <div class="boton" onclick="window.location.href='Pagina 2.html'"> Siguiente
+ </div>
+
+     <script>
+    function abrirVentana(num) {
+        document.getElementById("ventana" + num).style.display = "block";
+    }
+    function cerrarVentana(num) {
+        document.getElementById("ventana" + num).style.display = "none";
+    }
+ </script>
+</body>
+</html>

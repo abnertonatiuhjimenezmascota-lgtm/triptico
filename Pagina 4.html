@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title> Triptico interactivo </title>
+    <style>
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    height: 200vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("Imagenes/Fondo.jpg")
+}
+.boton_imagen {
+    background: none;
+    border: none;
+    cursor: none;
+}
+.boton_imagen img {
+    width: 150px;
+    height: 150px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px;
+    transition: transform 0.2s;
+}
+.boton_imagen img:hover {
+    transform: scale(1.1);
+}
+.fondo_modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+h1 {
+    color: black;
+    text-align: center;
+}
+p {
+   color: black;
+   font-size: 32px;
+   font-family: 'Times New Roman', Times, serif; 
+}
+.p1 {
+    color: black;
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.margen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 625px;
+    height: 925px;
+    background-color: green;
+}
+.rectangulo {
+    text-align: center;
+    width: 600px;
+    height: 900px;
+    background-color: orange;
+}
+.boton {
+    text-align: center;
+    color:white;
+    border: none;
+    cursor: pointer;
+    background-color: blue;
+    width: 70px;
+    height: 30px;
+    border-radius: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    transition: background-color 0.2s;
+}
+.boton:hover {
+    background-color:blue;
+}
+img {
+    width: 50%;
+}
+.ventana{
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 0 15px;
+    text-align: center;
+}
+textarea {
+    width: 90px;
+    height: 80px;
+    margin-top: 10px;
+    resize: none;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    padding: 5px;
+}
+.cerrar {
+    margin-top: 10px;
+    padding: 8px 15px;
+    background: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.cerrar:hover {
+    background: #0056b3;
+}
+</style>
+</head>
+<body>
+    <div class="margen"> 
+<div class="rectangulo">
+    <br> <h2> 3.1.1 Estilos de desarrollo legislativo ambiental en Mexico </h2>
+    <p1> <h4> ¿Qué son los estilos de desarrollo sustentable? </h4>
+Llevar un estilo de vida sostenible es más que el logro de un consumo responsable, se trata de vivir en base a un compromiso con el medio 
+ambiente y se puede alcanzar introduciendo pequeñas acciones en nuestro día a día. Un estilo de vida sostenible permitirá preservar el 
+planeta para las generaciones venideras. <br>
+<h4> ¿Como se componen los estilos de desarrollo? </h4>
+         Los estilos de desarrollo sustentable se pueden clasificar en enfoques económicos, ecológicos, sociales y culturales, 
+        con la legislación ambiental evolucionando históricamente para dar respuesta a la explotación de recursos.<br>
+
+<br> Estilos de desarrollo sustentable: <br> 
+
+-Económico: Busca un crecimiento que no sea a costa del ambiente, fomentando modelos productivos eficientes y compatibles con los 
+límites ecológicos del planeta. <br> 
+
+-Ecológico: Se centra en la conservación del medio ambiente, el cuidado de los ecosistemas y la reducción del impacto de las 
+actividades humanas a través de prácticas como el uso de energías renovables y el ahorro de agua. <br>
+
+-Social: Prioriza el desarrollo humano, la igualdad, el acceso equitativo a servicios básicos (salud, educación) y la 
+participación ciudadana en la toma de decisiones. <br>
+
+-Cultural: Reconoce y fomenta la diversidad de valores y prácticas que contribuyen a un desarrollo más integral y equitativo. <br>
+
+<br> Uno de los mayores ejemplos de la implemetacion de los estilos es la Agenda 2030 la cual tiene 17 objetivos que mezclan los 
+estilos anteriormente mencionados al efocarse en cosas como: Elimninar la pobreza, Reduccion de la desigualdad (Social y Cultural)
+Energia asequible y no contaminante (Economico) y Ciudades y comunidades sostenibles (Ecologico) por poner unos ejemplos.
+
+<h4> ¿Para que sirven estos estilos de desarrollo? </h4>
+        <button class="boton_imagen" onclick="abrirVentana()">  <img src="Imagenes/Estilos_Desarrollo.jpg" alt="Abrir ventana"> </button> <br>
+        <div class="fondo_modal" id="modal"> 
+            <div class="ventana">
+                <h5> La armonia de los estilos de desarrollo sustentable permiten que lleguemos a la sustentabilidad algo muy importante
+                    hoy en dia pues la sustentabilidad nos permitira ofrecernos una vida mejor a todas las especies de la tierra tanto en
+                esta generacion como en muchas mas a futuro </h5>
+                <button class="cerrar" onclick="cerrarVentana()"> Cerrar </button> <br> </div> </div>
+
+    </p1> </div> </div> 
+
+ <div class="boton" onclick="window.location.href='Pagina 3.html'"> Volver
+ </div>
+  <div class="boton" onclick="window.location.href='Pagina 5.html'"> Siguiente
+ </div>
+
+ <script>
+    function abrirVentana() {
+        document.getElementById("modal").style.display = "flex";
+    }
+    function cerrarVentana() {
+        document.getElementById("modal").style.display = "none";
+    }
+ </script>
+</body>
+</html>
